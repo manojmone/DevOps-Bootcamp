@@ -1,4 +1,4 @@
-# Welcome to DevOps Bootcamp 
+# Welcome to the DevOps Bootcamp 
 
 Welcome to the DevOps Bootcamp,  This bootcamp accompanies an instructor-led session that introduces DevOps concepts and toolchain.
 
