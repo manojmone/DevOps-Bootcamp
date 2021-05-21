@@ -167,67 +167,33 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull ubuntu
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Now, use this image to run Ubuntu in a docker container -</dt>
-<dd><div class="first last highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -t -i ubuntu /bin/bash
-</pre></div>
-</div>
-</dd>
-</dl>
+<p>Now, use this image to run Ubuntu in a docker container -</p>
 <p>You will be presented with a root prompt. Your workstation OS is ready!</p>
 </div>
 <div class="section" id="working-with-github">
 <h2>Working with Github<a class="headerlink" href="#working-with-github" title="Permalink to this headline">¶</a></h2>
 <p>Our developer desktop should be able to publish to a remote repository hosted on  github.com. To ensure this first login to github.com and create a new repository called DevOps-Bootcamp.</p>
 <p>Now to ensure we have a seamless and password free access to this repository from our developer computer, Let’s generate our own private and pubic ssh keys.</p>
-<dl class="docutils">
-<dt>To do so, use the following command on your developer desktop’s terminal window –</dt>
-<dd><div class="first last highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen
-</pre></div>
-</div>
-</dd>
-</dl>
+<p>To do so, use the following command on your developer desktop’s terminal window –</p>
 <p>When asked for paraphrase press the enter key, you will be asked again to confirm it.</p>
-<p>You will be shown messages similar to the one below -</p>
-<div class="figure">
-<img alt="../_images/SSH.png" src="../_images/SSH.png" />
-</div>
-<dl class="docutils">
-<dt>Next change directory to to the .ssh folder</dt>
-<dd><div class="first last highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> .ssh
-</pre></div>
-</div>
-</dd>
-</dl>
-<p>Next check if your private and public key files have been created –</p>
-<div class="figure">
-<img alt="../_images/ssh_check.png" src="../_images/ssh_check.png" />
-</div>
+<p>You will be shown messages similar to the one below -
+.. figure:: images/SSH.png</p>
+<p>Next change directory to to the .ssh folder</p>
+<p>Next check if your private and public key files have been created –
+.. figure:: images/ssh_check.png</p>
 <p>We will have to copy the public key contents, for this you can use the cat command and then copy the output to clipboard –</p>
 <p>This will display the contents of the public key file. Now copy this output to the clipboard.</p>
-<p>Now, in your browser navigate to the window where you have the github.com website open. Click on your profile image (top right corner) and click the settings menu that is displayed –</p>
-<div class="figure">
-<img alt="../_images/profilemenu.png" src="../_images/profilemenu.png" />
-</div>
-<p>Next navigate to the SSH and GPG keys menu and click on the button named New SSH key and paste the contents from clipboard. Hive an appropriate name to the new key.</p>
-<div class="figure">
-<img alt="../_images/ssh_gpg_menu.png" src="../_images/ssh_gpg_menu.png" />
-</div>
-<div class="figure">
-<img alt="../_images/new_ssh_keys.png" src="../_images/new_ssh_keys.png" />
-</div>
-<div class="figure">
-<img alt="../_images/add_ssh_keys.png" src="../_images/add_ssh_keys.png" />
-</div>
+<p>Now, in your browser navigate to the window where you have the github.com website open. Click on your profile image (top right corner) and click the settings menu that is displayed –
+.. figure:: images/profilemenu.png</p>
+<p>Next navigate to the SSH and GPG keys menu and click on the button named New SSH key and paste the contents from clipboard. Hive an appropriate name to the new key.
+.. figure:: images/ssh_gpg_menu.png
+.. figure:: images/new_ssh_keys.png
+.. figure:: images/add_ssh_keys.png</p>
 <p>On your Github homepage, click on ‘New’ and for Repository name enter - DevOps-Bootcamp. You can also add a brief description if you like.
-Remember to keep your repository setting to the default value of Public. Click on create repository. Your repository is ready!</p>
-<div class="figure">
-<img alt="../_images/repo_ready.png" src="../_images/repo_ready.png" />
-</div>
-<p>You will be shown an empty repository. Click on the code button and copy the ssh address shown in the box. It will always start with <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a></p>
-<div class="figure">
-<img alt="../_images/repo_ssh_address.png" src="../_images/repo_ssh_address.png" />
-</div>
+Remember to keep your repository setting to the default value of Public. Click on create repository. Your repository is ready!
+.. figure:: images/repo_ready.png
+You will be shown an empty repository. Click on the code button and copy the ssh address shown in the box. It will always start with <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>
+.. figure:: images/repo_ssh_address.png</p>
 <p>Coming back to your Ubuntu terminal, we will create a new devloper user called ‘devme’
 adduser devme</p>
 <ul class="simple">
