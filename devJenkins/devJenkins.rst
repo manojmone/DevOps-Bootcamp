@@ -122,39 +122,45 @@ Creating your first pipeline
 
 Jenkins Pipeline (or simply put "Pipeline") is a set of plugins which can be leveraged to implement and integrate continuous delivery pipelines into Jenkins.
 
-We will begin by adding credentials of Github to Jenkins os that we can access the repository seamlessly from within our pipelines. Navigate to 'Manage Jenkins' and click on 'Manage Credentials'.
-
-.. figure:: images/manage_credentials.png
-
-Click on the store name Jenkins. This will dispay another screen with tile System
-
-.. figure:: images/credentials1.png
-
-.. figure:: images/credential_system.png
-
-Click on the domain named "Global credentials (unrestricted)" and then click on the link "This credential domain is empty. How about adding some credentials?"
-
-.. figure:: images/add_credential.png
-
-Now provide your Github login and password details and save this credential.
-
-.. figure:: images/github_cred.png
-
-
-- Now, navigate back to the Jenkins dashboard and from the left menu, click on the menu named New Items
+- Navigate to the Jenkins dashboard and from the left menu, click on the menu named New Items
 
 .. figure:: images/jenkins_newitem.png
 
-- Provide a name for your new item (e.g. My-DevOps-Pipeline) and select Multibranch Pipeline and click on OK
+- Provide a name for your new item (e.g. My-DevOps-Pipeline) and select Pipeline and click on OK
   
 .. figure:: images/create_pipeline.png
 
-- Click the Add Source button, choose the type of repository as Github 
+- Click the Pipeline tab at the top of the page to scroll down to the Pipeline section. In the Pipeline section, ensure that the Definition field indicates the Pipeline script option.
+- Enter your Pipeline code into the Script text area.
 
-.. figure:: images/pipeline_info.png
+.. code-block:: bash 
 
-In the Branch source section, select the repository credentials that we created in our preceding steps. 
-.. figure:: images/repo_cred.png 
+  pipeline {
+    agent any 
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello DevOps!' 
+            }
+        }
+    }
+  }
 
-- Click the Save button and watch your first Pipeline run!
-- 
+- Click the Save button, this will take you to the Pipline view
+  
+.. figure:: images/pipeline_script.png
+
+- On this page, click Build Now on the left to run the Pipeline.
+
+.. figure:: images/build_now.png
+
+- You will be shown a Stage View detailing the progress of the build.
+
+.. figure:: images/stageview.png
+
+- Notice the section called "Build History" at the bottom of the left menu pane. We can view the details of the builds in this pane. For now you will see only one record #1.
+- Click on #1 to view the status. On the left menu click on Console Outputto view output of this build's pipeline run. 
+
+.. figure:: images/console_output.png 
+
+Your first pipeline is up and running!
