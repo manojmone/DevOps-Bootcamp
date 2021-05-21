@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Install Grafana</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Setting up Developer PC and accessing Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../devgit/devgit.html">Setting up Developer PC and accessing Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../devgit/devgit.html#lab-agenda">Lab Agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devgit/devgit.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devgit/devgit.html#getting-the-developer-workstation-ready">Getting the Developer workstation ready</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devgit/devgit.html#working-with-github">Working with Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devgit/devgit.html#working-with-our-code-and-publishing-it-to-git">Working with our code and publishing it to Git</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Installing Jenkins and Setting up a Pipeline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../devJenkins/devJenkins.html">Lab 2: Installing Jenkins and Setting up a Pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../devJenkins/devJenkins.html#lab-agenda">Lab Agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devJenkins/devJenkins.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devJenkins/devJenkins.html#installing-jenkins">Installing Jenkins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devJenkins/devJenkins.html#working-with-jenkins-to-build-docker-images">Working with Jenkins to build Docker Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../devJenkins/devJenkins.html#step-1-launch-jenkins">Step #1 : Launch Jenkins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../devJenkins/devJenkins.html#step-2-configure-the-plugins-and-start-building-docker-images">Step #2 : Configure the plugins and start building Docker Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../devJenkins/devJenkins.html#step-3-configure-docker-agent">Step #3 : Configure Docker agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../devJenkins/devJenkins.html#step-4-test-the-setup">Step #4 : Test the setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../devJenkins/devJenkins.html#working-with-jenkins-pipelines">Working with Jenkins Pipelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../devJenkins/devJenkins.html#create-a-new-job">Create a new job</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Setting up Developer PC and accessing Git</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../devgit/devgit.html">Setting up Developer PC and accessing Git</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Installing Jenkins and Setting up a Pipeline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../devJenkins/devJenkins.html">Lab 2: Installing Jenkins and Setting up a Pipeline</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="installing-grafana-in-karbon">
+<span id="connect"></span><h1>Installing Grafana in Karbon<a class="headerlink" href="#installing-grafana-in-karbon" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise we will install Grafana into the same <cite>ntnx-system</cite> namespace using Helm. If you haven’t got Helm deployed use these <span class="xref std std-ref">_helm</span> instructions to deploy it in your Linux Mint VM</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a Linux Mint VM (If one is not deployed already please use the instructions here <a class="reference internal" href="../appendix/linuxmint_tools_vm.html#linuxmint-tools-vm"><span class="std std-ref">Linux Mint Tools VM</span></a> to deploy one)</li>
+<li>Connect to Linux Mint VM and install kubectl tool</li>
+<li>Access you Karbon page and download KUBECONFIG file to Linux Mint VM</li>
+<li>Install Grafana into <code class="docutils literal notranslate"><span class="pre">ntnx-system</span></code> namespace</li>
+</ol>
+</div>
+<div class="section" id="connect-to-your-linuxmintvm">
+<h2>Connect to your LinuxMintVM<a class="headerlink" href="#connect-to-your-linuxmintvm" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Logon to your LinuxMint VM console as <cite>nutanix</cite> user (default password) and open terminal</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you are using your PC/Mac you can also ssh/putty to your LinuxMint VM</p>
+<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -l nutanix &lt;LinuxMint VM IP address&gt;
+</pre></div>
+</div>
+</div>
+</li>
+<li><p class="first">Paste the command in clipboard to the shell in your LinuxMint VM to install kubectl</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install -y apt-transport-https gnupg2
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s2">&quot;deb https://apt.kubernetes.io/ kubernetes-xenial main&quot;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+</pre></div>
+</div>
+</li>
+<li><p class="first">Verify your kubectl installation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="s1">&#39;k=kubectl&#39;</span>
+k version --client
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="access-your-kubernetes-cluster">
+<h2>Access your Kubernetes Cluster<a class="headerlink" href="#access-your-kubernetes-cluster" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Logon to your Prism Central <strong>https://&lt;PC VM IP&gt;:9440</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">if you haven’t got a Karbon deployed kubernetes cluster in your HPOC, refer here <span class="xref std std-ref">karbon_create_cluster</span></p>
+</div>
+</li>
+<li><p class="first">Go to <strong>Menu &gt; Services &gt; Karbon</strong></p>
+<div class="figure">
+<img alt="../_images/choosekarbon.png" src="../_images/choosekarbon.png" />
+</div>
+</li>
+<li><p class="first">Select your karbon cluster</p>
+</li>
+<li><p class="first">Click on Actions &gt; Download Kubeconfig</p>
+<div class="figure">
+<img alt="../_images/selectcluster.png" src="../_images/selectcluster.png" />
+</div>
+</li>
+<li><p class="first">Click on <strong>Copy the command to clipboard</strong></p>
+</li>
+<li><p class="first">Paste the contents in your Linux Tools VM shell</p>
+</li>
+<li><p class="first">Run the following command to verify your connectivity and display the nodes in the cluster</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k get nodes -o wide
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/nodelist.png" src="../_images/nodelist.png" />
+</div>
+</li>
+<li><p class="first">You can list the namespaces, storage claims, physical volumes and physical volume claims using the following commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k get ns
+k get sc,pv,pvc
+k get po -n ntnx-system
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/klistresources.png" src="../_images/klistresources.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Nutanix Karbon has automatically provisioned these kubernetes resources so it is ready to use. You have the option to provision additional storage claims, physical volumes, etc by using the Karbon console or using kubectl with YAML files</p>
+</div>
+</li>
+</ol>
+<p>You can also notice that Prometheus pods are running in the <code class="docutils literal notranslate"><span class="pre">ntnx-system</span></code>. We will make use of this Prometheus implementation as a data source for Grafana.</p>
+<p>Now that you have an understanding of available kubernetes cluster resources, go ahead and install Grafana.</p>
+</div>
+<div class="section" id="install-grafana">
+<h2>Install Grafana<a class="headerlink" href="#install-grafana" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Install Grafana using Helm</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm install stable/grafana --generate-name --namespace ntnx-system --set persistence.enabled<span class="o">=</span>true,persistence.type<span class="o">=</span>pvc,persistence.size<span class="o">=</span>10Gi --set service.type<span class="o">=</span>NodePort
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can notice that we have used the <code class="docutils literal notranslate"><span class="pre">set</span></code> argument to reserve 10 GiB for Grafana to store dashboards. This is more than enough for this lab. In production environment administrators will make a design decision about these parameters</p>
+</div>
+<p>You will see output similar to this. Run the commands in the output to get Grafana password. Note that this output will be different for you.</p>
+<div class="figure">
+<img alt="../_images/install-graf.png" src="../_images/install-graf.png" />
+</div>
+</li>
+<li><p class="first">Now lets get the password for Grafana implementation using which we can logon to Grafana console</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k get secret --namespace ntnx-system grafana-1597884244 -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.admin-password}&quot;</span> <span class="p">|</span> base64 --decode <span class="p">;</span> <span class="nb">echo</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">To find the nodeport and access URL for Grafana, execute the following commands to get Grafana service details</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>k get node -o wide
+k get svc -n ntnx-system
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/get-nodes-ip.png" src="../_images/get-nodes-ip.png" />
+</div>
+<p>So we have a node IP here <code class="docutils literal notranslate"><span class="pre">10.42.8.60</span></code> (you can choose either nodes)</p>
+<div class="figure">
+<img alt="../_images/nodeport-graf.png" src="../_images/nodeport-graf.png" />
+</div>
+<p>We have the nodeport as <code class="docutils literal notranslate"><span class="pre">32493</span></code></p>
+<p>Now we have the access URL in this form</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://&lt;IP&gt;:&lt;nodeport&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">http://10.42.8.60:32493</span></code></p>
+</li>
+<li><p class="first">Login to Grafana in a browser using the access URL and password from the previous steps</p>
+<div class="figure">
+<img alt="../_images/login-graf.png" src="../_images/login-graf.png" />
+</div>
+<div class="figure">
+<img alt="../_images/splash-graf.png" src="../_images/splash-graf.png" />
+</div>
+</li>
+</ol>
+<p>This completes your Grafana installation.</p>
+</div>
+<div class="section" id="configure-grafana">
+<h2>Configure Grafana<a class="headerlink" href="#configure-grafana" title="Permalink to this headline">¶</a></h2>
+<p>We will now configure the following in Grafana to visualise the health and status of Karbon kubernetes nodes, resources and some applications.</p>
+<p>To be able to set up views, we need to do the following:</p>
+<ul class="simple">
+<li>Setting up a data source for Grafana</li>
+<li>Test data source for Grafana</li>
+</ul>
+<p>Once the data source is configured we will do the following:</p>
+<ul class="simple">
+<li>Configure a custom dashboard</li>
+<li>Import a Grafana community configured dashboard</li>
+</ul>
+<div class="section" id="setting-up-a-data-source">
+<h3>Setting up a Data Source<a class="headerlink" href="#setting-up-a-data-source" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">In Grafana UI, click on Data Sources (Add your first data source)</p>
+<div class="figure">
+<img alt="../_images/datasource-graf.png" src="../_images/datasource-graf.png" />
+</div>
+</li>
+<li><p class="first">Highlight Prometheus and click on <strong>Select</strong></p>
+<div class="figure">
+<img alt="../_images/prom-ds.png" src="../_images/prom-ds.png" />
+</div>
+</li>
+<li><p class="first">Enter the following in the datasource URL in the URL-field and click on <strong>Save and Test</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://prometheus-k8s.ntnx-system.svc.cluster.local:9090
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/save-prom-ds.png" src="../_images/save-prom-ds.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>for the datasource URL above; the following are the parts of URL</p>
+<p>prometheus-k8s - name of your Prometheus service
+ntnx-system - your namespace
+svc - your Prometheus service
+cluster.local - generic DNS name for your kubernetes cluster
+9090 - prometheus ClusterIP port</p>
+<p class="last">This is the DNS reference of the Prometheus service within your namespace. All services in the namespace are able to resolve by doing a DNS lookup with kube-dns DNS server.</p>
+</div>
+</li>
+<li><p class="first">You should see a <strong>Data source is working</strong> message to confirm. If this is not working check for typos in the datasource URL.</p>
+<div class="figure">
+<img alt="../_images/working-ds.png" src="../_images/working-ds.png" />
+</div>
+</li>
+</ol>
+<p>Now that we have configured a datasource for Grafana, lets move to configuring dashboards and visualising metrics in the next section.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/connect/connect.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
