@@ -58,21 +58,22 @@ Now to ensure we have a seamless and password free access to this repository fro
 
 To do so, use the following command on your developer desktop’s terminal window –
   .. code-block:: bash
-
-  ssh-keygen
-
   
+    ssh-keygen
+
 When asked for paraphrase press the enter key, you will be asked again to confirm it.
 
 You will be shown messages similar to the one below -
+
 .. figure:: images/SSH.png
 
 Next change directory to to the .ssh folder
-
-.. code-block:: bash
-  $ cd .ssh 
+  .. code-block:: bash
+  
+    $ cd .ssh 
 
 Next check if your private and public key files have been created –
+
 .. figure:: images/ssh_check.png
 
 
@@ -87,18 +88,25 @@ This will display the contents of the public key file. Now copy this output to t
 
 
 Now, in your browser navigate to the window where you have the github.com website open. Click on your profile image (top right corner) and click the settings menu that is displayed –
+
 .. figure:: images/profilemenu.png
 
 
 Next navigate to the SSH and GPG keys menu and click on the button named New SSH key and paste the contents from clipboard. Hive an appropriate name to the new key.
+
 .. figure:: images/ssh_gpg_menu.png
+
 .. figure:: images/new_ssh_keys.png
+
 .. figure:: images/add_ssh_keys.png
 
 On your Github homepage, click on 'New' and for Repository name enter - DevOps-Bootcamp. You can also add a brief description if you like.
 Remember to keep your repository setting to the default value of Public. Click on create repository. Your repository is ready!
+
 .. figure:: images/repo_ready.png
+
 You will be shown an empty repository. Click on the code button and copy the ssh address shown in the box. It will always start with git@github.com
+
 .. figure:: images/repo_ssh_address.png
 
 Coming back to your Ubuntu terminal, we will create a new devloper user called 'devme'
