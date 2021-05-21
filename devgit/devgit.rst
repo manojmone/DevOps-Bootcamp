@@ -42,9 +42,10 @@ First pull the latest ubuntu image –
   docker pull ubuntu
 
 Now, use this image to run Ubuntu in a docker container -
+  .. code-block:: bash
 
-.. code-block:: bash
-  docker run -t -i ubuntu /bin/bash
+    docker run -t -i ubuntu /bin/bash
+
 
 You will be presented with a root prompt. Your workstation OS is ready!
 
@@ -56,10 +57,11 @@ Our developer desktop should be able to publish to a remote repository hosted on
 Now to ensure we have a seamless and password free access to this repository from our developer computer, Let’s generate our own private and pubic ssh keys.
 
 To do so, use the following command on your developer desktop’s terminal window –
+  .. code-block:: bash
 
-.. code-block:: bash
   ssh-keygen
 
+  
 When asked for paraphrase press the enter key, you will be asked again to confirm it.
 
 You will be shown messages similar to the one below -
