@@ -74,7 +74,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lab-agenda">Lab Agenda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-jenkins">Installing Jenkins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-a-build-job">Creating a build job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-your-first-pipeline">Creating your first pipeline</a></li>
 </ul>
 </li>
 </ul>
@@ -115,7 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lab-agenda">Lab Agenda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-jenkins">Installing Jenkins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-a-build-job">Creating a build job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-your-first-pipeline">Creating your first pipeline</a></li>
 </ul>
 </li>
 </ul>
@@ -219,17 +219,52 @@ After unlocking, click on Install suggested plugins tile on the Customize Jenkin
 After creating the admin user, setup the Instance configuration. Since you are only using Jenkins locally, leave the URL to your localhost URL.
 Click on Save and Finish to start using Jenkins.</p>
 </div>
-<div class="section" id="creating-a-build-job">
-<h2>Creating a build job<a class="headerlink" href="#creating-a-build-job" title="Permalink to this headline">¶</a></h2>
-<p>This build should:</p>
+<div class="section" id="creating-your-first-pipeline">
+<h2>Creating your first pipeline<a class="headerlink" href="#creating-your-first-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>Jenkins Pipeline (or simply put “Pipeline”) is a set of plugins which can be leveraged to implement and integrate continuous delivery pipelines into Jenkins.</p>
+<p>We will begin by adding credentials of Github to Jenkins os that we can access the repository seamlessly from within our pipelines. Navigate to ‘Manage Jenkins’ and click on ‘Manage Credentials’.</p>
+<div class="figure">
+<img alt="../_images/manage_credentials.png" src="../_images/manage_credentials.png" />
+</div>
+<p>Click on the store name Jenkins. This will dispay another screen with tile System</p>
+<div class="figure">
+<img alt="../_images/credentials1.png" src="../_images/credentials1.png" />
+</div>
+<div class="figure">
+<img alt="../_images/credential_system.png" src="../_images/credential_system.png" />
+</div>
+<p>Click on the domain named “Global credentials (unrestricted)” and then click on the link “This credential domain is empty. How about adding some credentials?”</p>
+<div class="figure">
+<img alt="../_images/add_credential.png" src="../_images/add_credential.png" />
+</div>
+<p>Now provide your Github login and password details and save this credential.</p>
+<div class="figure">
+<img alt="../_images/github_cred.png" src="../_images/github_cred.png" />
+</div>
 <ul class="simple">
-<li>Check out the specific commit</li>
-<li>Build the code</li>
-<li>Tag the commit in Git</li>
-<li>Push the tag to the origin repo</li>
+<li>Now, navigate back to the Jenkins dashboard and from the left menu, click on the menu named New Items</li>
 </ul>
-<p>(optional, but likely) deploy it to a server
-Notice that order matters here. If the build fails, we certainly don’t want to tag and deploy it. Steps 2 and 5 are fairly standard for any Jenkins job, so we won’t cover those here.</p>
+<div class="figure">
+<img alt="../_images/jenkins_newitem.png" src="../_images/jenkins_newitem.png" />
+</div>
+<ul class="simple">
+<li>Provide a name for your new item (e.g. My-DevOps-Pipeline) and select Multibranch Pipeline and click on OK</li>
+</ul>
+<div class="figure">
+<img alt="../_images/create_pipeline.png" src="../_images/create_pipeline.png" />
+</div>
+<ul class="simple">
+<li>Click the Add Source button, choose the type of repository as Github</li>
+</ul>
+<div class="figure">
+<img alt="../_images/pipeline_info.png" src="../_images/pipeline_info.png" />
+</div>
+<p>In the Branch source section, select the repository credentials that we created in our preceding steps.
+.. figure:: images/repo_cred.png</p>
+<ul class="simple">
+<li>Click the Save button and watch your first Pipeline run!</li>
+<li></li>
+</ul>
 </div>
 </div>
 

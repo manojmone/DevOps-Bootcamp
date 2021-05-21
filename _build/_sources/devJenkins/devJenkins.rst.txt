@@ -117,15 +117,44 @@ Wait until the installation of suggested plugins is complete and then you can pr
 After creating the admin user, setup the Instance configuration. Since you are only using Jenkins locally, leave the URL to your localhost URL. 
 Click on Save and Finish to start using Jenkins.
 
-Creating a build job
-+++++++++++++++++++++
+Creating your first pipeline
++++++++++++++++++++++++++++++
 
-This build should:
+Jenkins Pipeline (or simply put "Pipeline") is a set of plugins which can be leveraged to implement and integrate continuous delivery pipelines into Jenkins.
 
-- Check out the specific commit
-- Build the code
-- Tag the commit in Git
-- Push the tag to the origin repo
-(optional, but likely) deploy it to a server
-Notice that order matters here. If the build fails, we certainly don’t want to tag and deploy it. Steps 2 and 5 are fairly standard for any Jenkins job, so we won’t cover those here.
+We will begin by adding credentials of Github to Jenkins os that we can access the repository seamlessly from within our pipelines. Navigate to 'Manage Jenkins' and click on 'Manage Credentials'.
 
+.. figure:: images/manage_credentials.png
+
+Click on the store name Jenkins. This will dispay another screen with tile System
+
+.. figure:: images/credentials1.png
+
+.. figure:: images/credential_system.png
+
+Click on the domain named "Global credentials (unrestricted)" and then click on the link "This credential domain is empty. How about adding some credentials?"
+
+.. figure:: images/add_credential.png
+
+Now provide your Github login and password details and save this credential.
+
+.. figure:: images/github_cred.png
+
+
+- Now, navigate back to the Jenkins dashboard and from the left menu, click on the menu named New Items
+
+.. figure:: images/jenkins_newitem.png
+
+- Provide a name for your new item (e.g. My-DevOps-Pipeline) and select Multibranch Pipeline and click on OK
+  
+.. figure:: images/create_pipeline.png
+
+- Click the Add Source button, choose the type of repository as Github 
+
+.. figure:: images/pipeline_info.png
+
+In the Branch source section, select the repository credentials that we created in our preceding steps. 
+.. figure:: images/repo_cred.png 
+
+- Click the Save button and watch your first Pipeline run!
+- 
