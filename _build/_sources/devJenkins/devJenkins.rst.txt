@@ -164,4 +164,3 @@ Jenkins Pipeline (or simply put "Pipeline") is a set of plugins which can be lev
 .. figure:: images/console_output.png 
 
 Your first pipeline is up and running!
-
