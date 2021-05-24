@@ -6,9 +6,9 @@
 Lab 2: Installing Jenkins and Setting up a Pipeline
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Welcome to the second lab of the DevOps Bootcamp! 
+Welcome to the second lab of the DevOps Bootcamp!
 
-In this lab you will install Jenkins and configure a pipeline. 
+In this lab you will install Jenkins and configure a pipeline.
 
 .. note::
 
@@ -20,7 +20,7 @@ Lab Agenda
 
 - Install Jenkins
 - Configure a Pipeline
-  
+
 
 Prerequisites
 ++++++++++++++
@@ -30,12 +30,12 @@ Prerequisites
 
 Installing Jenkins
 +++++++++++++++++++
-We will again use Docker to create a new Jenkins instamce. Before we get started, you’ll need to ensure that you have installed Docker on your machine. 
+We will again use Docker to create a new Jenkins instamce. Before we get started, you’ll need to ensure that you have installed Docker on your machine.
 
 After installing Docker, download the latest stable Jenkins image by running:
 
 .. code-block:: bash
-  
+
   docker image pull jenkins/jenkins:lts
 
 The main benefit of using Docker containers for hosting Jenkins is that you will be able to persist the state of your Jenkins server using Docker volumes. How does that help?
@@ -46,7 +46,7 @@ The main benefit of using Docker containers for hosting Jenkins is that you will
 You can create a volume by running the command below:
 
 .. code-block:: bash
-  
+
   docker volume create [YOUR VOLUME]
 
 For example, if you wish to name your docker volume name as jenkinsvol:
@@ -56,7 +56,7 @@ docker volume create jenkinsvol
 Run the container by attaching the volume and assigning the targeted port. In this example, we'll also run it in detached mode. Here is the command to run your Docker container:
 
 .. code-block:: bash
-  
+
   docker container run -d \
     -p [YOUR PORT]:8080 \
     -v [YOUR VOLUME]:/var/jenkins_home \
@@ -72,7 +72,7 @@ Here is what each argument means:
 For example, the command below will create a new container named jenkins-local that uses docker volume named jenkinsvol.
 
 .. code-block:: bash
-  
+
   docker container run -d -p 8082:8080 \
     -v jenkinsvol:/var/jenkins_home \
     --name jenkins-local \
@@ -88,13 +88,12 @@ You will be shown a scree like the one below -
 
 .. figure:: images/unlock_jenkins.png
 
-
 So where's this password? As a part of the Jenkins setup, the password is kept inside the container instance. In order to do this, we need to use the CONTAINER ID (or the name) and run docker exec.
 
 Here is the full command to access it -
 
 .. code-block:: bash
-  
+
     docker container exec \
     [CONTAINER ID or NAME] \
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
@@ -102,19 +101,19 @@ Here is the full command to access it -
 So, to find the password for my container named jenkins-local, the command will be:
 
 .. code-block:: bash
-  
+
     docker container exec \
     jenkins-local \
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 
-You will be shown an alpha-numeric code as an output, Copy the code and paste it on the webpage to unlock Jenkins. 
-After unlocking, click on Install suggested plugins tile on the Customize Jenkins page. 
+You will be shown an alpha-numeric code as an output, Copy the code and paste it on the webpage to unlock Jenkins.
+After unlocking, click on Install suggested plugins tile on the Customize Jenkins page.
 
 .. figure:: images/customize_jenkins.png
 
 
 Wait until the installation of suggested plugins is complete and then you can proceed in creating your first admin user.
-After creating the admin user, setup the Instance configuration. Since you are only using Jenkins locally, leave the URL to your localhost URL. 
+After creating the admin user, setup the Instance configuration. Since you are only using Jenkins locally, leave the URL to your localhost URL.
 Click on Save and Finish to start using Jenkins.
 
 Creating your first pipeline
@@ -127,27 +126,27 @@ Jenkins Pipeline (or simply put "Pipeline") is a set of plugins which can be lev
 .. figure:: images/jenkins_newitem.png
 
 - Provide a name for your new item (e.g. My-DevOps-Pipeline) and select Pipeline and click on OK
-  
+
 .. figure:: images/create_pipeline.png
 
 - Click the Pipeline tab at the top of the page to scroll down to the Pipeline section. In the Pipeline section, ensure that the Definition field indicates the Pipeline script option.
 - Enter your Pipeline code into the Script text area.
 
-.. code-block:: bash 
+.. code-block:: bash
 
   pipeline {
-    agent any 
+    agent any
     stages {
         stage('Stage 1') {
             steps {
-                echo 'Hello DevOps!' 
+                echo 'Hello DevOps!'
             }
         }
     }
   }
 
 - Click the Save button, this will take you to the Pipline view
-  
+
 .. figure:: images/pipeline_script.png
 
 - On this page, click Build Now on the left to run the Pipeline.
@@ -159,8 +158,8 @@ Jenkins Pipeline (or simply put "Pipeline") is a set of plugins which can be lev
 .. figure:: images/stageview.png
 
 - Notice the section called "Build History" at the bottom of the left menu pane. We can view the details of the builds in this pane. For now you will see only one record #1.
-- Click on #1 to view the status. On the left menu click on Console Outputto view output of this build's pipeline run. 
+- Click on #1 to view the status. On the left menu click on Console Outputto view output of this build's pipeline run.
 
-.. figure:: images/console_output.png 
+.. figure:: images/console_output.png
 
 Your first pipeline is up and running!
