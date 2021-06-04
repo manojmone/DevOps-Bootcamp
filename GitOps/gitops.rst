@@ -138,15 +138,15 @@ Accessing Argo CD Server
 
 We are all set to access the Argo CD portal. We will use the port forwarding method fo this.
 
-  .. code-block:: bash
-
+.. code-block:: bash
+  
     $ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 This will start the posrt forwarding session and make the Argo CD portal accessible over the browser. Keep this terminal window open (you may minimize it but don't terminate it). 
 
 Open your browser window and navigate to the url -
 
-. code-block:: bash
+.. code-block:: bash
 
   http://localhost:8080
 
@@ -230,8 +230,8 @@ The app folder will be hosted on our github repository feature branch featurebra
       directory:
       recurse: true
     destination:
-    server: https://kubernetes.default.svc
-    namespace: dev
+      server: https://kubernetes.default.svc
+      namespace: dev
   syncPolicy:
     automated:
       prune: false
