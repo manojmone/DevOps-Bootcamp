@@ -18,9 +18,16 @@
   
 .. toctree::
   :maxdepth: 2
+  :caption: GitOps on a Laptop
+  :name:   _gitops:
+  :hidden:
+
+  .. toctree::
+  :maxdepth: 2
   :caption: Appendix
   :name: _appendix
   :hidden:
+
 
 ++++++++++++++++++++
 DevOps Bootcamp 
