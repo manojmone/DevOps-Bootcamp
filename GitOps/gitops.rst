@@ -54,7 +54,6 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 
 To install minikube on x86-64 Linux using binary download:
 
-
 .. code-block:: bash
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
