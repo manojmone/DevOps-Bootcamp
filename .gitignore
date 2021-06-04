@@ -1,1 +1,8 @@
 _build/
+coverage/
+npm-debug.log
+box-node-express-skeleton-app/app/config/local.js
+box-node-express-skeleton-app/app/config/production.js
+box-node-express-skeleton-app/app/*_config.json
+config.json
+package-lock.json
