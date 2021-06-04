@@ -56,7 +56,8 @@ Labs
     - Install Jenkins and configure a pipeline
 - Lab 3
     - Install and setup a local Kubernetes cluster using minikube
-    - Logging and monitoring using Karbon
+    - GitOps using Argo CD
+  
   
 
 Initial Setup
