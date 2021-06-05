@@ -57,7 +57,7 @@ Initial Setup
 
 - You will need Docker Desktop installed on your computer.
 - You can download it from here - https://www.docker.com/products/docker-desktop
-- You will need an Github account. 
+- You will need a Github account. 
 - It is recommended that you use your personal Github account and not an enterprsie account.
 - If you don't have a Github account, you can create one here - https://github.com/ 
   
