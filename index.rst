@@ -18,9 +18,16 @@
   
 .. toctree::
   :maxdepth: 2
+  :caption: GitOps on a Laptop
+  :name:   _gitops:
+  :hidden:
+
+  .. toctree::
+  :maxdepth: 2
   :caption: Appendix
   :name: _appendix
   :hidden:
+
 
 ++++++++++++++++++++
 DevOps Bootcamp 
@@ -49,7 +56,8 @@ Labs
     - Install Jenkins and configure a pipeline
 - Lab 3
     - Install and setup a local Kubernetes cluster using minikube
-    - GitOps using Minicube and ArgoCD
+    - GitOps using Argo CD
+  
   
 
 Initial Setup
@@ -57,7 +65,7 @@ Initial Setup
 
 - You will need Docker Desktop installed on your computer.
 - You can download it from here - https://www.docker.com/products/docker-desktop
-- You will need a Github account. 
+- You will need an Github account. 
 - It is recommended that you use your personal Github account and not an enterprsie account.
 - If you don't have a Github account, you can create one here - https://github.com/ 
   

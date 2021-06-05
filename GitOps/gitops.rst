@@ -244,7 +244,7 @@ Next Apply this file -
 
   kubectl apply -f application.yaml -n argocd
 
-The effect of synchronization is immediate! You will be able to see this in your browser screen running Argo CD -
+The effect of synchronization is almost immediate! Switch to your browser screen running Argo CD and here's what you will see -
 
 .. figure:: images/AppSync.png
 
