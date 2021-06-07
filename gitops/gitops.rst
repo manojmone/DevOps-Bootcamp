@@ -127,9 +127,9 @@ We begin our Argo CD installation by creating a new namespace -
 Run kubectl get ns command on your terminal and you’ll see a new namespace has been created inside your cluster. 
 Then we can install Argo CD into that namespace using the command below [make sure to use the exact command].
 
-  .. code-block:: bash
+.. code-block:: bash
 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 This command will start creating all the required resources inside the namespace argocd. This takes some time to complete, so wait till the cursor returns to the prompt.
 
