@@ -4,7 +4,7 @@
 
 
 ++++++++++++++++++++++++++++++++++++++++++
-Setup a local cluster with Minikube
+GitOps on a Laptop
 ++++++++++++++++++++++++++++++++++++++++++
 
 Welcome to the third lab of the DevOps Bootcamp!
