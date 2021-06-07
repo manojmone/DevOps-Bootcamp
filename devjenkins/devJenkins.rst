@@ -1,9 +1,9 @@
 .. _devJenkins:
 
-.. title:: Installing Jenkins and Setting up a Pipeline
+.. title:: Setting up a Jenkins Pipeline
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-Lab 2: Installing Jenkins and Setting up a Pipeline
+Setting up a Jenkins Pipeline
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Welcome to the second lab of the DevOps Bootcamp! 

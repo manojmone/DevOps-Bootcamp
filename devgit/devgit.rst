@@ -1,10 +1,10 @@
 .. _devgit:
 
-.. title:: Setting up Developer PC and accessing Git
+.. title:: Setting up Git
 
 
 ++++++++++++++++++++++++++++++++++++++++++
-Setting up Developer PC and accessing Git
+Setting up Git
 ++++++++++++++++++++++++++++++++++++++++++
 
 Welcome to the first module of the DevOps Bootcamp!
