@@ -41,10 +41,14 @@ We will be using our Laptop Macbookas our host for the Kubernetes cluster. The p
 On your terminal window, follow these steps to install minikube -
 The instructions in this lab assume you are using a Macbook. If you are using Windows, follow these steps for the installation of minikube -
 
+Installing Minikube For Windows 
+................................
+
 Download and run the stand-alone minikube Windows installer available here - https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
 
 
-For Mac -
+Installing Minikube For Mac 
+............................
 
 Install Homebrew -
 
@@ -96,6 +100,8 @@ To install Minikube run the below command on your terminal.
 
   $ sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 
+Verify Minikube Installation 
+.............................
 
 We verify the setup is correct by running minikube command:
 
