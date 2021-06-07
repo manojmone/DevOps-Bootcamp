@@ -2,7 +2,7 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Setting up Developer PC and accessing Git
+  :caption: Setting up Git 
   :name: _devgit
   :hidden:
   
@@ -10,11 +10,11 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Installing Jenkins and Setting up a Pipeline
+  :caption: Setting up a Jenkins Pipeline
   :name: _devJenkins
   :hidden:
 
-  devJenkins/devJenkins
+  devjenkins/devjenkins
   
 .. toctree::
   :maxdepth: 2
@@ -22,6 +22,8 @@
   :name:   _gitops:
   :hidden:
 
+  gitops/gitops
+  
   .. toctree::
   :maxdepth: 2
   :caption: Appendix
@@ -42,7 +44,7 @@ At the end of the bootcamp, attendees should understand the core concepts and to
 
 .. note::
 
-	Estimated time to complete these labs is 180 minutes
+  Estimated time to complete these labs is 180 minutes
 
 
 Labs
