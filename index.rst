@@ -14,7 +14,7 @@
   :name: _devJenkins
   :hidden:
 
-  devJenkins/devJenkins
+  devjenkins/devjenkins
   
 .. toctree::
   :maxdepth: 2
@@ -22,6 +22,8 @@
   :name:   _gitops:
   :hidden:
 
+  gitops/gitops
+  
   .. toctree::
   :maxdepth: 2
   :caption: Appendix
