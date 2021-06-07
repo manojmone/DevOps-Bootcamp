@@ -12,7 +12,7 @@ In this lab you will install Jenkins and configure a pipeline.
 
 .. note::
 
-	Estimated time to complete this lab is 45 minutes
+	Estimated time to complete this lab is 60 minutes
 
 
 Lab Agenda

@@ -13,7 +13,7 @@ You will create a typical developer workstation and use it to configure access t
 
 .. note::
 
-	Estimated time to complete this lab is 30 minutes
+	Estimated time to complete this lab is 60 minutes
 
 
 Lab Agenda
