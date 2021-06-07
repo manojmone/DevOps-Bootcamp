@@ -2,7 +2,7 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Setting up Developer PC and accessing Git
+  :caption: Setting up Git 
   :name: _devgit
   :hidden:
   
@@ -10,7 +10,7 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Installing Jenkins and Setting up a Pipeline
+  :caption: Setting up a Jenkins Pipeline
   :name: _devJenkins
   :hidden:
 
