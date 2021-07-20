@@ -31,6 +31,15 @@ Prerequisites
 - You will need an Github account. Make sure you don't use the enterprise Github.
 - If you don't have a Github account, you can create one here - https://github.com/
 
+What is GitOps
++++++++++++++++
+
+- GitOps implements a Kubernetes controller that listens for and synchronizes deployments to your Kubernetes cluster. The controller uses the operator pattern.
+- With the operator pattern, an agent acts on behalf of the cluster. 
+- It listens to events relating to custom resource changes, and then applies those changes based on a deployment policy. 
+- The agent is responsible for synchronizing what’s in Git with what’s running in the cluster, providing a simple way for your team to achieve continuous deployment. 
+
+.. figure:: images/GitOps.png
 
 Setup a local cluster with Minikube
 ++++++++++++++++++++++++++++++++++++
