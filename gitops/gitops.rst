@@ -9,7 +9,7 @@ GitOps on a Laptop
 
 Welcome to the GitOps lab!
 
-You will create a typical developer workstation Mac/Windows.
+You will create a typical developer workstation.
 
 .. note::
 
