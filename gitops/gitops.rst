@@ -7,9 +7,9 @@
 GitOps on a Laptop
 ++++++++++++++++++++++++++++++++++++++++++
 
-Welcome to the third lab of the DevOps Bootcamp!
+Welcome to the GitOps lab!
 
-You will create a typical developer workstation and use it to configure access to a Git repository.
+You will create a typical developer workstation Mac/Windows.
 
 .. note::
 
@@ -20,6 +20,7 @@ Lab Agenda
 +++++++++++
 
 - Configure minikube on the developer desktop
+- Implement GitOps using Argo CD
 
 
 Prerequisites
@@ -29,6 +30,7 @@ Prerequisites
 - You can download it from here - https://www.docker.com/products/docker-desktop
 - You will need an Github account. Make sure you don't use the enterprise Github.
 - If you don't have a Github account, you can create one here - https://github.com/
+
 
 Setup a local cluster with Minikube
 ++++++++++++++++++++++++++++++++++++
@@ -46,17 +48,8 @@ Installing Minikube For Windows
 
 Download and run the stand-alone minikube Windows installer available here - https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
 
-
-Installing Minikube For Mac 
-............................
-
-Install Homebrew -
-
-.. code-block:: bash
-
- $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-
+Installing Minikube For Linux 
+................................
 To install minikube on x86-64 Linux using binary download:
 
 .. code-block:: bash
@@ -67,7 +60,8 @@ To install minikube on x86-64 Linux using binary download:
 
   sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
-For a Mac, follow these steps -
+Installing Minikube For Mac 
+............................
 
 We will be using Homebrew package manager. If you don't have it alreay installed on your mac, you can install it by running thi scommand in your terminal - 
 
