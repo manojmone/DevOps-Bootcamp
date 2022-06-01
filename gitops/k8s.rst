@@ -118,38 +118,34 @@ Run the below command to get your nodes inside the cluster.
 
   kubectl get nodes
 
-## The Kubernetes Client
+The Kubernetes Client
+++++++++++++++++++++++
 
 The official kubernetes client is `kubectl`
 
 `kubectl` can manage: pods, replicasets and services. You can also explore the overall health of a cluster.
 
-### Checking Cluster Status
-
+Checking Cluster Status
++++++++++++++++++++++++
 Get version
 
+.. code-block:: bash
     kubectl version
 
-    Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T23:43:08Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"darwin/amd64"}
-    Server Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T19:09:08Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"linux/amd64"}
 
 Tells you the client and server version. They can be different versions as long as they are within 2 major versions.
 
 Get componentstatuses:
 
+.. code-block:: bash
     kubectl get componentstatuses
-
-    NAME                 AGE
-    scheduler            <unknown>
-    controller-manager   <unknown>
-    etcd-0               <unknown>
 
 * `controller-manager` - regulates behaviour ensures components are healthy
 * `scheduler` - places different pods on different nodes
 * `etcd` server - storage for api objects
 
-### List Worker Nodes
-
+List Worker Nodes
+++++++++++++++++++
     kubectl get nodes
 
     NAME       STATUS   ROLES    AGE   VERSION
