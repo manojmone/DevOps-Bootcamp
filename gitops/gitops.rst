@@ -72,7 +72,7 @@ To install minikube on x86-64 Linux using binary download:
 Installing Minikube For Mac 
 ............................
 
-We will be using Homebrew package manager. If you don't have it alreay installed on your mac, you can install it by running thi scommand in your terminal - 
+We will be using Homebrew package manager. If you don't have it alreay installed on your mac, you can install it by running this command in your terminal - 
 
 .. code-block:: bash
 
