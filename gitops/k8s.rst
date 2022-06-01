@@ -139,6 +139,7 @@ Tells you the client and server version. They can be different versions as long 
 Get componentstatuses:
 
 .. code-block:: bash
+    
     kubectl get componentstatuses
 
 * `controller-manager` - regulates behaviour ensures components are healthy
@@ -147,17 +148,22 @@ Get componentstatuses:
 
 List Worker Nodes
 ++++++++++++++++++
+
+.. code-block:: bash
+    
     kubectl get nodes
 
-    NAME       STATUS   ROLES    AGE   VERSION
-    minikube   Ready    <none>   30m   v1.16.2
-
+    
 * `master` nodes contain the API server and scheduler
 * `worker` nodes are where your container run
 
 Get info about a specific node:
 
+.. code-block:: bash
+    
+
     kubectl describe nodes <nodename>
+    
     kubectl describe nodes minikube
 
 Get the:
@@ -179,6 +185,8 @@ They run in the `kube-system` namespace
 
 View the proxies:
 
+.. code-block:: bash
+    
     kubectl get daemonSets --namespace=kube-system kube-proxy
 
 ### Kubernetes DNS
@@ -188,6 +196,8 @@ View the proxies:
 
 Get the DNS deployment:
 
+.. code-block:: bash
+    
     kubectl get deployments --namespace=kube-system coredns
 
 Get service that load balances dns:
