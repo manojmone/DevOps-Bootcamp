@@ -130,6 +130,7 @@ Checking Cluster Status
 Get version
 
 .. code-block:: bash
+    
     kubectl version
 
 
