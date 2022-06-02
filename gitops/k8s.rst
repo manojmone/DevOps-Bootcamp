@@ -173,12 +173,14 @@ Get the:
 * Software info: Docker, kubernetes and Linux Kernel versions
 * Pod Information - You can get name, CPU and memory of each pod - requests and limits also tracked
 
-## Cluster Components
+Cluster Components
++++++++++++++++++++
 
 Many of the components that make up the kubernetes cluster are deployed using kubernetes itself.
 They run in the `kube-system` namespace
 
-### Kubernetes Proxy
+Kubernetes Proxy
++++++++++++++++++
 
 * Responsible for routing traffic to load balanced services
 * Must be present on every node (uses `Daemonset` for this)
@@ -189,7 +191,8 @@ View the proxies:
     
     kubectl get daemonSets --namespace=kube-system kube-proxy
 
-### Kubernetes DNS
+Kubernetes DNS
++++++++++++++++
 
 * Naming and discovery for services
 * DNS service is run as a `deployment`
@@ -211,7 +214,9 @@ Get service that load balances dns:
 
 If you check a container in a cluster the cluster ip `10.96.0.10` will be in `/etc/resolv.conf`
 
-## Kubernetes UI
+Kubernetes UI
+++++++++++++++
+
 
 The final component is the GUI. A single replica managed by kubernetes.
 
