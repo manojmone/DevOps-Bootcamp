@@ -16,12 +16,12 @@ Labs
 +++++
 
 
-- Lab 1
+- Lab 1 - https://github.com/manojmone/DevOps-Bootcamp/blob/master/devgit/devgit.rst
     - Setup Developer desktop using Docker
     - Configure Git on the developer desktop and remote commit code to Github
-- Lab 2
+- Lab 2 - https://github.com/manojmone/DevOps-Bootcamp/blob/master/devjenkins/devjenkins.rst 
     - Install Jenkins and configure a pipeline
-- Lab 3
+- Lab 3 - https://github.com/manojmone/DevOps-Bootcamp/blob/master/gitops/k8s.rst  
     - Install and setup a local Kubernetes cluster using minikube
     - GitOps using Minicube and Argo CD
   
