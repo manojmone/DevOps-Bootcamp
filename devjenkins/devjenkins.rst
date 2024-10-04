@@ -114,6 +114,7 @@ If you were to run the docker ps or nerdctl ps (in case of rancher) command now,
 Now that we know that our container is running, we will use the browser to access our Jenkins instance.
 
 Now open your web browser and type this in the url box -
+
 .. code-block:: bash
   
     http://localhost:8082/
@@ -144,6 +145,7 @@ So, to find the password for my container named jenkins-local, the command will 
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 
 In case of Rancher -
+
 .. code-block:: bash
   
     nerdctl container exec \
