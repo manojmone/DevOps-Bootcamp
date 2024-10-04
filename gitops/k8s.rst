@@ -52,11 +52,12 @@ Installing Minikube For Mac
 ............................
 
 
-Install curl-
+Install curl -
 
 .. code-block:: bash
 
-apt-get install curl
+   apt-get install curl
+
 
 
 Install Homebrew -
