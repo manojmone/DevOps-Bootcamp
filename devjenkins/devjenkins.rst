@@ -99,7 +99,7 @@ For example, the command below will create a new container named jenkins-local t
     --name jenkins-local \
     jenkins/jenkins:lts
 
-For rancher, replace teh word docker with nerdctl -
+For Rancher, replace the word docker with nerdctl -
 .. code-block:: bash
   
   nerdctl container run -d -p 8082:8080 \
