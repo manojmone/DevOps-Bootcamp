@@ -54,7 +54,8 @@ For Rancher -
 
 .. code-block:: bash
 
-nerdctl run -t -i ubuntu /bin/bash
+  nerdctl run -t -i ubuntu /bin/bash
+
 
 You will be presented with a root prompt. Your workstation OS is ready!
 
