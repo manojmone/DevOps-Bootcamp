@@ -96,7 +96,7 @@ To do so, use the following command on your developer desktop’s terminal windo
 
 .. code-block:: bash
 
-  apt-get ssh-keygen
+  ssh-keygen
 
 When asked for paraphrase press the enter key, you will be asked again to confirm it.
 
