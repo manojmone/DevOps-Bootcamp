@@ -26,8 +26,9 @@ Lab Agenda
 Prerequisites
 ++++++++++++++
 
-- You will need Docker Desktop installed on your computer.
-- You can download it from here - https://www.docker.com/products/docker-desktop
+- You will need Docker Desktop or Rancher Desktop installed on your computer.
+- You can download Docker from here - https://www.docker.com/products/docker-desktop
+- You can download Rancher from here - https://docs.rancherdesktop.io/getting-started/installation/
 - You will need an Github account. Make sure you don't use the enterprise Github.
 - If you don't have a Github account, you can create one here - https://github.com/
 
@@ -41,11 +42,19 @@ First pull the latest ubuntu image –
 
   docker pull ubuntu
 
+In case of Rancher, navigate to images and type ubuntu in :Name of image to pull:"
+
 Now, use this image to run Ubuntu in a docker container
 
 .. code-block:: bash
 
   docker run -t -i ubuntu /bin/bash
+
+For Rancher - 
+
+.. code-block:: bash
+
+nerdctl run -t -i ubuntu /bin/bash
 
 You will be presented with a root prompt. Your workstation OS is ready!
 
