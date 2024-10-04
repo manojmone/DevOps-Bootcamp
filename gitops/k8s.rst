@@ -26,9 +26,8 @@ Prerequisites
 ++++++++++++++
 
 - You will need Docker or Rancher Desktop installed on your computer.
-- You can download 
-Docker from here - https://www.docker.com/products/docker-desktop
-Rancher from here - https://docs.rancherdesktop.io/getting-started/installation/
+- You can download Docker from here - https://www.docker.com/products/docker-desktop
+- You can download Rancher from here - https://docs.rancherdesktop.io/getting-started/installation/
 - You will need an Github account. Make sure you don't use the enterprise Github.
 - If you don't have a Github account, you can create one here - https://github.com/
 
@@ -52,7 +51,8 @@ Download and run the stand-alone minikube Windows installer available here - htt
 Installing Minikube For Mac 
 ............................
 
-Install curl
+
+Install curl-
 
 .. code-block:: bash
 
