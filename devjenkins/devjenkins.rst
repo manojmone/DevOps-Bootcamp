@@ -38,6 +38,13 @@ After installing Docker, download the latest stable Jenkins image by running:
   
   docker image pull jenkins/jenkins:lts
 
+If you are using Rancher -
+
+.. code-block:: bash
+  
+  nertdctl image pull jenkins/jenkins:lts
+
+
 The main benefit of using Docker containers for hosting Jenkins is that you will be able to persist the state of your Jenkins server using Docker volumes. How does that help?
   - You will retain all your projects and configurations even after restarting your computer (local machine)
   - You don't need to run the whole Jenkins setup again
@@ -53,11 +60,25 @@ For example, if you wish to name your docker volume name as jenkinsvol:
 
 docker volume create jenkinsvol
 
+If you are using Rancher -
+
+.. code-block:: bash
+  
+  nertdctl volume create jenkinsvol
+
 Run the container by attaching the volume and assigning the targeted port. In this example, we'll also run it in detached mode. Here is the command to run your Docker container:
 
 .. code-block:: bash
   
   docker container run -d \
+    -p [YOUR PORT]:8080 \
+    -v [YOUR VOLUME]:/var/jenkins_home \
+    --name jenkins-local \
+    jenkins/jenkins:lts
+
+.. code-block:: bash
+  
+  nerdctl container run -d \
     -p [YOUR PORT]:8080 \
     -v [YOUR VOLUME]:/var/jenkins_home \
     --name jenkins-local \
@@ -78,7 +99,16 @@ For example, the command below will create a new container named jenkins-local t
     --name jenkins-local \
     jenkins/jenkins:lts
 
-If you were to run the docker ps command now, you should see two containers one would be the ubuntu container created in lab 1 and second will be the jenkins container.
+For rancher, replace teh word docker with nerdctl -
+.. code-block:: bash
+  
+  nerdctl container run -d -p 8082:8080 \
+    -v jenkinsvol:/var/jenkins_home \
+    --name jenkins-local \
+    jenkins/jenkins:lts
+
+
+If you were to run the docker ps or nerdctl ps (in case of rancher) command now, you should see two containers one would be the ubuntu container created in lab 1 and second will be the jenkins container.
 
 Now that we know that our container is running, we will use the browser to access our Jenkins instance.
 
@@ -106,6 +136,14 @@ So, to find the password for my container named jenkins-local, the command will 
     docker container exec \
     jenkins-local \
     sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
+
+In case of Rancher -
+.. code-block:: bash
+  
+    nerdctl container exec \
+    jenkins-local \
+    sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
+
 
 You will be shown an alpha-numeric code as an output, Copy the code and paste it on the webpage to unlock Jenkins. 
 After unlocking, click on Install suggested plugins tile on the Customize Jenkins page. 
