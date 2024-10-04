@@ -42,7 +42,13 @@ First pull the latest ubuntu image –
 
   docker pull ubuntu
 
-In case of Rancher, navigate to images and type ubuntu in :Name of image to pull:"
+In case of Rancher, navigate to images and type ubuntu in "Name of image to pull:" or on terminal, key in following command - 
+
+
+.. code-block:: bash
+
+  nerdctl pull ubuntu
+
 
 Now, use this image to run Ubuntu in a docker container
 
