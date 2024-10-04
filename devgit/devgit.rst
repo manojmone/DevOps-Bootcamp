@@ -64,6 +64,16 @@ Working with Github
 
 Our developer desktop should be able to publish to a remote repository hosted on  github.com. To ensure this first login to github.com and create a new repository called DevOps-Bootcamp.
 
+Coming back to your Ubuntu terminal, we will create a new devloper user called 'devme'
+adduser devme
+
+- Next we will change our terminal session from root to the newly created user devme
+
+.. code-block:: bash
+
+  su devme
+
+
 Now to ensure we have a seamless and password free access to this repository from our developer computer, Let’s generate our own private and pubic ssh keys.
 
 To do so, use the following command on your developer desktop’s terminal window –
@@ -127,16 +137,7 @@ You will be shown an empty repository. Click on the code button and copy the ssh
 
 .. figure:: images/repo_ssh_address.png
 
-Coming back to your Ubuntu terminal, we will create a new devloper user called 'devme'
-adduser devme
-
-- Next we will change our terminal session from root to the newly created user devme
-
-.. code-block:: bash
-
-  su devme
-
-- first create a folder named demo
+Coming back to your Ubuntu terminal,first create a folder named demo
 
 .. code-block:: bash
 
