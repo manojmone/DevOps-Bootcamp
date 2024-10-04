@@ -112,7 +112,12 @@ If you were to run the docker ps or nerdctl ps (in case of rancher) command now,
 
 Now that we know that our container is running, we will use the browser to access our Jenkins instance.
 
-localhost:[YOUR PORT] (localhost:8082 based on my docker container run example above) You can replace 8082 to the port of your choice.
+Now open your web browser and type this in the url box -
+.. code-block:: bash
+  
+    http://localhost:8082/
+
+localhost:[YOUR PORT] (localhost:8082 based on my docker container run example above). You may replace 8082 to the port of your choice in the earlier command and use the same in the browser as well.
 
 You will be shown a scree like the one below -
 
