@@ -244,7 +244,7 @@ and
 
 You can use `kubectl proxy` to access the UI
 
-You can then access the service at: [http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/)
+You can then access the service at: [http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/pod?namespace=_all]
 
 Working with Kubernetes
 ++++++++++++++++++++++++
